@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Categories from "./components/Categories";
+import PublishedAt from "./components/PublishedAt";
+import Text from "./components/Text";
+import Profile from "./components/Profile";
+import illustration from "../src/assets/images/illustration-article.svg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{
+        height: "100vh",
+        backgroundColor: "hsl(47, 88%, 63%)",
+      }}
+    >
+      <div
+        className="card p-4"
+        style={{
+          width: "22rem",
+          height: "30rem",
+          borderColor: "black",
+          borderRadius: "30px",
+          borderRightWidth: "8px",
+          borderBottomWidth: "8px",
+        }}
+      >
+        <img src={illustration} alt="alt" className="rounded" />
+        <Categories />
+        <PublishedAt />
+        <Text />
+        <Profile />
+      </div>
     </div>
   );
 }
